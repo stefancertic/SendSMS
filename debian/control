@@ -1,0 +1,24 @@
+Source: sendsms
+Section: Network
+Priority: extra
+Maintainer: CS Networks <support@cs-networks.net>
+Build-Depends: debhelper (>= 8.0.0), autotools-dev
+Standards-Version: 3.9.2
+Homepage: http://www.cs-networks.net
+#Vcs-Git: git://git.debian.org/collab-maint/sendsms.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/sendsms.git;a=summary
+
+Package: sendsms
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Send SMS Messages using CS Networks HTTP API - console client
+ Send SMS Messages using CS Networks HTTP API
+
+Package: gsendsms
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends} sendsms (>= 0.1)
+Description: Send SMS Messages using CS Networks HTTP API - GTK client
+ Graphical frontend for the Send SMS Messages using CS Networks HTTP API
+ console client
+
+

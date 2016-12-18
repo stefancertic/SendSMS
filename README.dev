@@ -1,0 +1,8 @@
+To change the package version edit:
+configure.in
+
+
+To rebuild the debian packages use:
+./makedeb.sh
+
+

@@ -1,0 +1,16 @@
+		Send SMS
+===============================================
+Usage:
+sendsms {-f bulkfile|-d recipient} [-u username] [-p password] [-s sourceaddr ] [-r] message
+
+-f bulkfile   - File with destination number on each line
+-d recipient  - Destination number
+-u username   - Service username
+-p password   - Service password
+-s sourceaddr - Source number
+-r            - Request Delivery Report
+message - text to send to the destination number (required)
+
+You must specify either bulkfile or recipient.
+Service username is required.
+
