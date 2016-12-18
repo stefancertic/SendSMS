@@ -14,3 +14,4 @@ message - text to send to the destination number (required)
 You must specify either bulkfile or recipient.
 Service username is required.
 
+More Informations at: https://www.certic.info/
