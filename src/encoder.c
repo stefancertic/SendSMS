@@ -10,14 +10,6 @@ struct charmap {
 	char *t;
 };
 
-/**
- * Encode an UTF-8 string into GSM 03.38
- * Since UTF-8 is largely ASCII compatible, and GSM 03.38 is somewhat compatible, unnecessary conversions are removed.
- * Specials chars such as € can be encoded by using an escape char \x1B in front of a backwards compatible (similar) char.
- * UTF-8 chars which doesn't have a GSM 03.38 equivalent is replaced with a question mark.
- * UTF-8 continuation bytes (\x08-\xBF) are replaced when encountered in their valid places, but
- * any continuation bytes outside of a valid UTF-8 sequence is not processed.
- */
 
 struct charmap gsm7map[] = {
 	{	.f = "@" , .t = "\x00", },
@@ -270,5 +262,4 @@ SMS_GSMEncode(
    }
    return -1; /* ok */
 }
-From: http://mobiletidings.com/2009/07/06/how-to-pack-gsm7-into-septets/
 #endif
