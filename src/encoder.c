@@ -103,11 +103,7 @@ static int translate_char(struct charmap *cm, const char *f, char **ret)
 	return 0;
 }
 
-/**
- * Encode an UTF-8 string into GSM 03.38
- * encode_unhandled - encode chars that are not int the ia5 alphabet as "?"
- * totalbad - optional - return the count of characters not in the ia5 alphabet
- */
+
 int encode_str_gsm7(char *str, char **ret, int encode_unhandled, int *totalbad)
 {
 	int sta;
@@ -216,10 +212,8 @@ int main(int argc, char **argv)
 #endif
 
 #if 0
-/*
-   GSM-7 packing routing.
-   Written by Jeroen @ Mobile Tidings (http://mobiletidings.com)
-*/
+
+
 int                                /* Returns -1 for success, 0 for failure */
 SMS_GSMEncode(
    int             inSize,         /* Number of GSM-7 characters */
